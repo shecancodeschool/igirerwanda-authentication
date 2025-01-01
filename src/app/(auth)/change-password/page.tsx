@@ -1,4 +1,3 @@
-import { cn } from "@/lib/utils"
 import {
   Card,
   CardContent,
@@ -8,9 +7,9 @@ import {
 } from "@/components/ui/card"
 import { ChangePasswordForm } from "@/components/widgets/forms/change-password-form"
 
-export default function page({ className, ...props }: React.ComponentPropsWithoutRef<"div">) {
+const page = () => {
   return (
-    <div className={cn("flex flex-col gap-6", className)} {...props}>
+    <div className="flex flex-col gap-6">
       <Card>
         <CardHeader className="text-center">
           <CardTitle className="text-xl">Change Password</CardTitle>
@@ -25,3 +24,5 @@ export default function page({ className, ...props }: React.ComponentPropsWithou
     </div>
   )
 }
+
+export default page;
